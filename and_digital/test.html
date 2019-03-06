@@ -1,0 +1,48 @@
+<!-- a file for testing the class implementation without any beautification -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Test page for class usage</title>
+  <script src="scripts.js"></script>
+</head>
+<body>
+  <!-- list declared at top -->
+  <script type="text/javascript">
+    const newCandidates = [
+    { name: "Kerrie", skills: ["JavaScript", "Docker", "Ruby"] },
+    { name: "Mario", skills: ["Python", "AWS"] },
+    { name: "Jacquline", skills: ["JavaScript", "Azure"] },
+    { name: "Kathy", skills: ["JavaScript", "Java"] },
+    { name: "Anna", skills: ["JavaScript", "AWS"] },
+    { name: "Matt", skills: ["PHP", "AWS"] },
+    { name: "Matt", skills: ["PHP", ".Net", "Docker"] },
+    ];
+
+    // first set of candidates
+    let candidates = new Candidates(newCandidates);
+    candidates.toLog();
+
+    // filtered set of candidates
+    let candidates2 = new Candidates(newCandidates);
+    candidates2.filterCandidatesBySkill('JavaScript');
+  </script>
+
+  <h2>Example Table 1</h2>
+  <div id="table_goes_here">
+    <script type="text/javascript">
+      candidates.toTable('table_goes_here');
+    </script>
+  </div>
+
+  <h2>Example Table 2</h2>
+  <div id="another_table">
+    <script type="text/javascript">
+      candidates2.toTable('another_table');
+    </script>
+  </div>
+</body>
+</html>
